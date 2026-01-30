@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr" class="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Supermedia | Premium Electronics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#007FFF",
+              "maastricht": "#001A33",
+              "princeton": "#FF8F00",
+              "coral-red": "#FF4D4D",
+              "background-light": "#F8FAFC",
+              "background-dark": "#000D1A",
+              "shure-green": "#C4D600",
+              "shure-black": "#0A0A0A",
+              "shure-dark": "#121212",
+              "silver-grey": "#C0C0C0",
+              "platinum": "#E5E4E2",
+            },
+            fontFamily: {
+              display: ["Roboto", "sans-serif"],
+              sans: ["Roboto", "sans-serif"],
+              technical: ["Open Sans", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "12px",
+            },
+            animation: {
+                marquee: 'marquee 25s linear infinite',
+            },
+            keyframes: {
+                marquee: {
+                    '0%': { transform: 'translateX(100%)' },
+                    '100%': { transform: 'translateX(-100%)' },
+                }
+            }
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .hide-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+        .hide-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #001A33 0%, #007FFF 100%);
+        }
+        .shure-gradient {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuAVAVakhHKZ0nEtP9DtsocdzNsEzXFgIOkwlMzT-XDaG2SW3Tvr-mxzkBdlk4ZrA9dtaw_dfgpwd9eBRhqq3yysi0XSOT8q1GqaJQcxx0uAQDR6Qn896uyjFm8fsUrLWEPHtuLj-JsQDd38Ee73wlqQAwflocRdQ5uECJflddpYI32NDKIqEiF3QFJ7Qf6ECi2WYTEDuLNLyet7iGBmxvopyDDeI8rm1UyC4Vx8-6zZrkjOYh1LS6oEZRt8gXHYmaPawV5ZFg55JSw');
+            background-size: cover;
+            background-position: center;
+        }
+        .hero-b2b-gradient {
+            background: linear-gradient(135deg, #001A33 0%, #002D59 50%, #007FFF 100%);
+        }
+        .universe-card-overlay {
+            background: linear-gradient(to bottom, transparent 0%, rgba(0, 26, 51, 0.1) 40%, rgba(0, 26, 51, 0.8) 100%);
+        }
+        .active-brand-dot {
+            @apply ring-4 ring-primary ring-offset-2 dark:ring-offset-background-dark;
+        }
+        .grayscale-logo {
+            filter: grayscale(100%);
+            opacity: 0.5;
+            transition: all 0.3s ease;
+        }
+        .grayscale-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4"
+  }
+}
+</script>
+</head>
+  <body class="font-sans bg-background-light dark:bg-background-dark text-maastricht dark:text-white transition-colors duration-300">
+    <div id="root"></div>
+  </body>
+</html>
